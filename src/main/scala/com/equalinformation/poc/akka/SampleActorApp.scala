@@ -10,7 +10,7 @@ import akka.actor.Props
 
 class SampleActor extends Actor {
   def receive = {
-    case "hello" => println("test reflected")
+    case "test" => println("test reflected")
     case _       => println("not a test")
   }
 }
