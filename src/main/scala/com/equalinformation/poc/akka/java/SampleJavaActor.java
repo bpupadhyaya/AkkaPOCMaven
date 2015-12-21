@@ -11,9 +11,9 @@ public class SampleJavaActor extends UntypedActor {
     @Override
     public void preStart() {
         // create the greeter actor
-        final ActorRef greeter = getContext().actorOf(Props.create(GreeterActor.class), "greeter");
+        final ActorRef greeterActor = getContext().actorOf(Props.create(GreeterActor.class), "greeter");
         // tell it to perform the greeting
-        greeter.tell(GreeterActor.Msg.GREET, getSelf());
+        greeterActor.tell(GreeterActor.Msg.GREET, getSelf());
     }
 
     @Override
